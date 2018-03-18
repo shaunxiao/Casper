@@ -60,6 +60,9 @@ Casper uses inline SVG icons, included via Handlebars partials. You can find all
 
 You can add your own SVG icons in the same manner.
 
+```text
+desk van chef stomach debate lonely reward life disorder iron hedgehog tornado
+```
 
 # Copyright & License
 

@@ -164,7 +164,7 @@ body {
 }
 
 .site-logo {
-    max-height: 45px;
+    max-height: 120px;
 }
 
 .site-description {
@@ -265,6 +265,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     padding: 10px 12px;
     color: #fff;
     opacity: 0.8;
+    font-size: 1.5rem;
 }
 
 .nav li a:hover {
@@ -387,6 +388,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     overflow: hidden;
     margin: 0 20px 40px;
     min-height: 300px;
+    max-height: 450px;
     background: #fff center center;
     background-size: cover;
     border-radius: 5px;
@@ -449,6 +451,15 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .post-card-excerpt {
     font-family: Georgia, serif;
+}
+
+.post-card-excerpt > p {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 
 .post-card-meta {
@@ -515,6 +526,15 @@ The first (most recent) post in the list is styled to be bigger than the others 
     .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-meta {
         padding: 0 40px 30px;
     }
+
+    .home-template .post-feed .post-card:nth-child(6n+1) .post-card-excerpt > p {
+        word-break: break-all;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+    }
 }
 
 .home-template .site-header:after {
@@ -540,7 +560,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-template .site-main,
 .page-template .site-main {
     padding-bottom: 4vw;
-    background: #fff;
+    background: #f2f2f2;
 }
 
 .post-full {
@@ -587,7 +607,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 .post-full-image {
     margin: 0 -10vw -165px;
-    height: 800px;
+    height: 450px;
     background: var(--lightgrey) center center;
     background-size: cover;
     border-radius: 5px;
@@ -596,14 +616,14 @@ The first (most recent) post in the list is styled to be bigger than the others 
 @media (max-width: 1170px) {
     .post-full-image {
         margin: 0 -4vw -100px;
-        height: 600px;
+        height: 450px;
         border-radius: 0;
     }
 }
 
 @media (max-width: 800px) {
     .post-full-image {
-        height: 400px;
+        height: 300px;
     }
 }
 
@@ -616,6 +636,8 @@ The first (most recent) post in the list is styled to be bigger than the others 
     font-size: 2.2rem;
     line-height: 1.6em;
     background: #fff;
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px #33333333;
 }
 
 @media (max-width: 1170px) {
@@ -731,7 +753,6 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-content video {
     display: block;
     margin: 1.5em auto;
-    max-width: 1040px;
 }
 @media (max-width: 1040px) {
     .post-full-content img,
@@ -967,7 +988,7 @@ Usage (In Ghost editor):
     }
     .post-full-image {
         margin-bottom: 4vw;
-        height: 350px;
+        height: 250px;
     }
     .post-full-content {
         padding: 0;
